@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext" rel="stylesheet">
+    <title>GAME "PAPER, ROCK, SCISSOR"</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: roboto, sans-serif;
+            background-color: #eee;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        h3 {
+            margin: 30px 0;
+        }
+
+        .panel {
+            margin: 20px;
+        }
+
+        .panel-left,
+        .panel-right {
+            display: inline-block;
+            width: 48%;
+            overflow: hidden;
+            margin: 40px auto 0;
+            text-align: center;
+        }
+
+        .panel-left p {
+            font-size: 20px;
+        }
+
+        .panel h3 {
+            text-align: center;
+        }
+
+        h1,
+        h3 {
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-top: 30px;
+        }
+
+        .select {
+            overflow: hidden;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        .select img {
+            width: 300px;
+            margin: 40px;
+            display: inline-block;
+            border-radius: 50%;
+
+        }
+
+        button {
+            display: block;
+            padding: 5px 20px;
+            border: 2px solid black;
+            text-transform: uppercase;
+            background-color: #fff;
+            font-weight: bold;
+            margin: 10px auto;
+            transition: .3s;
+            font-size: 30px;
+            cursor: pointer;
+            border-radius: 20%;
+        }
+
+        button:hover {
+            background-color: rgb(20, 20, 20);
+            color: white;
+            box-shadow: 0 0 0 5px yellow;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>"PAPER, ROCK, SCISSOR"</h1>
+
+    <div class="select">
+
+        <h3>Please, select:</h3>
+
+        <img data-option="paper" class="first" src="paper.jpg" alt="" title="Paper">
+
+        <img data-option="rock" src="rock.jpg" alt="" title="Rock">
+
+        <img data-option="scissor" src="scissor.jpg" alt="" title="scissor">
+
+    </div>
+
+    <button class="start">Let's play!</button>
+
+    <div class="panel-left">
+        <h3>Current game:</h3>
+        <p>Your choice: <span data-summary="your-choice"></span></p>
+        <p>AI choice: <span data-summary="ai-choice"></span></p>
+        <h2>The winner of the game : <span data-summary="who-win"></span></h2>
+    </div>
+
+    <div class="panel-right">
+        <h3>Scores</h3>
+        <p class="numbers">Number of games: <span>0</span></p>
+        <p class="wins">wins: <span>0</span></p>
+        <p class="losses">losses: <span>0</span></p>
+        <p class="draws">draws: <span>0</span></p>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
